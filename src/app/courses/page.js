@@ -1,6 +1,4 @@
 // import { useEffect, useState } from "react";
-import { Description } from "@mui/icons-material";
-import Navbar from "../components/Navbar";
 import CourseCard from "../components/CourseCard";
 
 export default function Home() {
