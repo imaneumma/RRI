@@ -1,5 +1,3 @@
-import Link from "next/link";
-
 const FeatureCard = ({ feature }) => {
   return (
     <div className="border p-4 rounded-lg shadow-md bg-white text-gray-700">

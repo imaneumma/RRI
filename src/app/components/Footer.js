@@ -1,4 +1,4 @@
-import ContactBanner from "/ContactBanner";
+import ContactBanner from "@/components/ContactBanner";
 
 const Footer = () => {
   return (
