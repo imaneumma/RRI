@@ -1,36 +1,61 @@
-import Link from "next/link";
+"use client";
 
-const Navbar = () => {
+import { usePathname } from "next/navigation";
+import Link from "next/link";
+import Avatar from "@mui/joy/Avatar";
+
+export default function Navbar() {
+  const pathname = usePathname();
+
   return (
-    <nav className="flex py-6 px-6 items-center space-x-6">
+    <nav className="grow m-10 items-center space-x-4 uppercase text-gray-700 relative">
       <Link
         href="/"
-        className="text-gray-700 text-4xl inline-block align-baseline"
+        className={`link px-4 py-2 border-2 hover:bg-amber-50 hover:border-2 hover:border-amber-50 ${
+          pathname === "/" ? "active border-amber-50 " : "border-transparent"
+        }`}
       >
-        LMS
+        Home
       </Link>
-      <Link href="/dashboard" className="text-gray-700">
+      <Link
+        href="/dashboard"
+        className={`link px-4 py-2 border-2  hover:bg-amber-50 hover:border-2 hover:border-amber-50 ${
+          pathname === "/dashboard"
+            ? "active border-amber-50"
+            : "border-transparent"
+        }`}
+      >
         Dashboard
-      </Link>
-      <Link href="/profile" className="text-gray-700">
-        Profile
-      </Link>
-      <Link href="/courses" className="text-gray-700">
-        Courses
       </Link>
 
       <Link
-        href="/profile"
-        className="text-gray-700 rounded-full border-red-400 inline-block"
+        href="/courses"
+        className={`link px-4 py-2 border-2 border-transparent hover:bg-amber-50 hover:border-2 hover:border-amber-50 ${
+          pathname === "/courses"
+            ? "active border-amber-50"
+            : "border-transparent"
+        }`}
       >
-        Profile
+        Courses
+      </Link>
+      <Link
+        href="/visionboard"
+        className={`link  px-4 py-2 border-2  hover:bg-amber-50 hover:border-2 hover:border-amber-50 ${
+          pathname === "/visionboard"
+            ? "active border-amber-50"
+            : "border-transparent"
+        }`}
+      >
+        Vision Board
       </Link>
 
-      <div className="text-gray-700 rounded-full border-red-400 inline-block">
-        Profile
-      </div>
+      <Link href="/profile" className=" text-white absolute right-0 -top-2">
+        <Avatar
+          variant="solid"
+          className="bg-amber-900  hover:bg-amber-500 border-2 border-amber-500"
+          size="lg"
+        />
+      </Link>
     </nav>
   );
-};
-
-export default Navbar;
+}

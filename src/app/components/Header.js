@@ -5,9 +5,9 @@ import Navbar from "@/components/Navbar";
 const Header = () => {
   return (
     <div className="flex ">
-      <div className="logo-wrapper py-4 px-4 pt-6 bg-sky-500 rounded-md">
+      <div className="logo-wrapper py-1 px-2 pt-2 bg-stone-700 rounded-md">
         <Image
-          className="flex-none dark:invert "
+          className="flex-none dark:invert"
           src="/rri-logo-left-crop.png"
           alt="Read Right Institute logo"
           width={250}
