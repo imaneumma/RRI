@@ -66,8 +66,8 @@ export default function Home() {
         <h1 className="text-2xl font-bold mb-8">Recommended Courses for you</h1>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 ">
           {courses.map((course) => (
-            <div onClick={() => openDetails(course.id)}>
-              <CourseCard key={course.id} course={course} />
+            <div onClick={() => openDetails(course.id)} key={course.id}>
+              <CourseCard course={course} />
             </div>
           ))}
         </div>
