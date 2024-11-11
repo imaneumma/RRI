@@ -15,7 +15,7 @@ export default function Home() {
     //<div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
     <div className="p-8  ">
       <div className="grid grid-cols-2  gap-4 my-12 min-h-[496px]">
-        <h1 className="text-6xl tracking-wide font-light font-sans uppercase  mt-32">
+        <h1 className="text-6xl tracking-wide font-light font-sans uppercase mt-16 max-w-64">
           Craft your future today.
         </h1>
 

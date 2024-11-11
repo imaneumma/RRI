@@ -1,9 +1,16 @@
-import { Label } from "@mui/icons-material";
+"use client";
 import { CheckBox } from "@mui/icons-material";
-import { Button } from "@mui/joy";
+import Button from "@mui/joy/Button";
 import Card from "@mui/joy/Card";
+import { useRouter } from "next/navigation";
 
 export default function Login() {
+  const router = useRouter();
+
+  function authenticate() {
+    router.replace("/dashboard");
+  }
+
   return (
     <div>
       <Card
@@ -30,7 +37,10 @@ export default function Login() {
           <label>remember me</label>
         </div>
         <div className="flex place-content-center mt-6">
-          <Button className="bg-amber-900  hover:bg-amber-500 px-8 py-2 font-light text-lg">
+          <Button
+            className="bg-amber-900  hover:bg-amber-500 px-8 py-2 font-light text-lg"
+            onClick={authenticate}
+          >
             Login
           </Button>
         </div>
