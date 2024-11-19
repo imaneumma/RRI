@@ -3,6 +3,7 @@
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import Avatar from "@mui/joy/Avatar";
+import ProfileMenu from "@/components/PofileMenu";
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -50,11 +51,7 @@ export default function Navbar() {
       </Link>
 
       <Link href="/profile" className=" text-white absolute right-0 -top-2">
-        <Avatar
-          variant="solid"
-          className="bg-amber-900  hover:bg-amber-500 border-2 border-amber-500"
-          size="lg"
-        />
+        <ProfileMenu></ProfileMenu>
       </Link>
     </nav>
   );

@@ -29,19 +29,19 @@ export default function RootLayout({ children }) {
       >
         <div className="bg-orange-50">
           <div className="flex max-h-[680px] overflow-hidden absolute m-auto left-0 right-0 justify-center items-center">
-            <Image
+            {/* <Image
               className=""
               src="/bg-images/write.jpg"
               alt="read right main page"
               width={1160}
               height={680}
               priority
-            />
+            /> */}
           </div>
 
           <div className="max-w-6xl m-auto relative">
             <Header />
-            <div className="">{children}</div>
+            <div className="mt-4">{children}</div>
             <Footer />
           </div>
         </div>
