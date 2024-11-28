@@ -1,8 +1,8 @@
 // import { useEffect, useState } from "react";
 "use client";
+
 import CourseCard from "@/components/CourseCard";
 import { useRouter } from "next/navigation";
-
 export default function Home() {
   // const [courses, setCourses] = useState([]);
 
@@ -59,6 +59,56 @@ export default function Home() {
       id: 8,
       description: "This is the course description and enjoy!",
     },
+    {
+      title: "Constitutional Law",
+      id: 9,
+      description: "This is the course description and enjoy!",
+    },
+    {
+      title: "Constitutional Law",
+      id: 10,
+      description: "This is the course description and enjoy!",
+    },
+    {
+      title: "Current Affairs",
+      id: 11,
+      description: "This is the course description and enjoy!",
+    },
+    {
+      title: "Politics",
+      id: 12,
+      description: "This is the course description and enjoy!",
+    },
+    {
+      title: "English essay",
+      id: 13,
+      description: "This is the course description and enjoy!",
+    },
+    {
+      title: "Islamic studies",
+      id: 14,
+      description: "This is the course description and enjoy!",
+    },
+    {
+      title: "General science and ability",
+      id: 15,
+      description: "This is the course description and enjoy!",
+    },
+    {
+      title: "Accounting",
+      id: 16,
+      description: "This is the course description and enjoy!",
+    },
+    {
+      title: "Auditing",
+      id: 17,
+      description: "This is the course description and enjoy!",
+    },
+    {
+      title: "Constitutional Law",
+      id: 18,
+      description: "This is the course description and enjoy!",
+    },
   ];
   return (
     <div className="px-8 py-12">
@@ -66,7 +116,11 @@ export default function Home() {
         <h1 className="text-2xl font-bold mb-8">Recommended Courses for you</h1>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 ">
           {courses.map((course) => (
-            <div onClick={() => openDetails(course.id)} key={course.id}>
+            <div
+              onClick={() => openDetails(course.id)}
+              key={course.id}
+              className=""
+            >
               <CourseCard course={course} />
             </div>
           ))}
